@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="M&M Refrigeração e Climatização – Instalação, manutenção e contratos PMOC para empresas e residências em Curitiba e região. Atendimento rápido, equipe certificada." />
+  <meta name="keywords"
+    content="ar condicionado, manutenção ar condicionado, PMOC, climatização, refrigeração, Curitiba" />
+  <title>M&M Refrigeração e Climatização | Curitiba e Região</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#1E3A8A',
+              blueMid: '#2563EB',
+              blueLight: '#DBEAFE',
+              orange: '#EA580C',
+              orangeLight: '#FFF7ED',
+              dark: '#1F2937',
+              gray: '#6B7280',
+              offwhite: '#F9FAFB',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Sticky WhatsApp button */
+    .whatsapp-fab {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 999;
+      background: #25D366;
+      border-radius: 9999px;
+      width: 3.5rem;
+      height: 3.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .whatsapp-fab:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 28px rgba(37, 211, 102, 0.55);
+    }
+
+    nav {
+      background-color: rgba(255, 255, 255, 0.97);
+    }
+
+    /* Sticky nav background */
+    .nav-scrolled {
+      background: rgba(255, 255, 255, 0.97);
+      box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Card hover */
+    .service-card {
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(30, 58, 138, 0.12);
+    }
+
+    /* Orange CTA button */
+    .btn-orange {
+      background: #EA580C;
+      color: #fff;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-orange:hover {
+      background: #C2410C;
+      transform: scale(1.02);
+    }
+
+    /* Blue outline button */
+    .btn-blue-outline {
+      border: 2px solid #2563EB;
+      color: #2563EB;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-blue-outline:hover {
+      background: #2563EB;
+      color: #fff;
+    }
+
+    /* Fade-in on scroll - lightweight */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* FAQ accordion */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+
+    .faq-answer.open {
+      max-height: 500px;
+    }
+
+    .faq-icon {
+      transition: transform 0.3s;
+    }
+
+    .faq-icon.rotated {
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-white text-brand-dark antialiased">
+
+  <!-- ============================================================
+       STICKY NAV
+  ============================================================ -->
+  <nav id="navbar"
+    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-10 lg:px-20 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2" aria-label="M&M Refrigeração">
+
+      <!-- Espaço para a logo em imagem -->
+      <img src="imagens/logo-m&m.png" alt="Logo M&M" class="h-10 w-auto object-contain" />
+
+      <!-- Texto da logo (Opcional: você pode apagar esta linha abaixo se a sua imagem já tiver o nome da empresa) -->
+      <span class="font-extrabold text-brand-blue text-lg tracking-tight leading-tight">M&M <span
+          class="text-brand-gray font-medium text-sm block -mt-1">Climatização & Refrigeração</span></span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-dark">
+      <li><a href="#servicos" class="hover:text-brand-blue transition-colors">Serviços</a></li>
+      <li><a href="#diferenciais" class="hover:text-brand-blue transition-colors">Por que a M&M</a></li>
+      <li><a href="#faq" class="hover:text-brand-blue transition-colors">Dúvidas</a></li>
+    </ul>
+
+    <a href="https://wa.me/554196197088?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento!"
+      class="btn-orange hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold"
+      target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg>
+      Orçamento Rápido
+    </a>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="relative bg-brand-blue overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28 px-6 md:px-10 lg:px-20">
+    <!-- Background texture -->
+    <div class="absolute inset-0 opacity-5"
+      style="background-image: radial-gradient(circle at 25% 50%, #fff 1px, transparent 1px), radial-gradient(circle at 75% 20%, #fff 1px, transparent 1px); background-size: 40px 40px;">
+    </div>
+    <!-- Orange accent -->
+    <div class="absolute -bottom-16 -right-16 w-72 h-72 rounded-full bg-brand-orange opacity-10 blur-3xl"></div>
+
+    <div class="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Coluna copy -->
+      <div>
+        <span
+          class="inline-block bg-brand-orange bg-opacity-20 text-orange-300 text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full mb-6">Climatização
+          & Refrigeração</span>
+
+        <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+          Seu ar funcionando sem<br />
+          <span class="text-orange-400">dor de cabeça</span>,<br />o ano inteiro.
+        </h1>
+
+        <p class="text-blue-200 text-lg md:text-xl font-medium mb-10 leading-relaxed">
+          Instalação, manutenção preventiva e corretiva, venda de equipamentos e contratos PMOC, com equipe certificada,
+          prazo cumprido e ambiente limpo pós-serviço.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://wa.me/554196197088?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento!"
+            class="btn-orange inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-base font-bold"
+            target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Solicitar Orçamento Rápido
+          </a>
+          <a href="#servicos"
+            class="btn-blue-outline inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold text-blue-200 border-blue-500 border-2 hover:bg-blue-700 hover:text-white transition-colors">
+            Ver Serviços
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 5v14M5 12l7 7 7-7" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Trust indicators -->
+        <div class="flex flex-wrap gap-x-8 gap-y-3 mt-12 text-sm text-blue-200">
+          <div class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+            Equipe certificada
+          </div>
+          <div class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+            Ambiente limpo pós-serviço
+          </div>
+          <div class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+            Dentro das normas da vigilância
+          </div>
+        </div>
+      </div>
+
+      <!-- ╔══════════════════════════════════════════════════════╗
+           ║  IMAGEM HERO — SLOT 1 DE 4                          ║
+           ║  Recomendação: foto do técnico em ação, instalando   ║
+           ║  ou fazendo manutenção. Orientação vertical (3:4).   ║
+           ║  Para usar: troque o src abaixo pelo caminho da foto.║
+           ╚══════════════════════════════════════════════════════╝ -->
+      <div class="hidden md:flex items-end justify-center">
+        <div class="relative w-full max-w-sm">
+          <img src="imagens/instalador-ar-condicionado.webp" alt="Técnico M&M realizando instalação de ar-condicionado"
+            class="w-full h-auto rounded-2xl shadow-xl object-cover object-top" style="max-height: 520px;"
+            onerror="this.parentElement.innerHTML=this.parentElement.querySelector('.img-placeholder').outerHTML" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVIÇOS
+  ============================================================ -->
+  <section id="servicos" class="py-20 md:py-28 px-6 md:px-10 lg:px-20 bg-brand-offwhite">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <span class="text-brand-orange text-sm font-semibold tracking-widest uppercase">O que fazemos</span>
+        <h2 class="text-brand-dark text-3xl md:text-4xl font-extrabold mt-3 leading-snug">Tudo que você precisa,<br />em
+          um só lugar.</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Instalação -->
+        <div class="service-card bg-white rounded-2xl p-7 border border-gray-100 reveal">
+          <div class="w-12 h-12 rounded-xl bg-brand-blueLight flex items-center justify-center mb-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="8" rx="2" />
+              <path d="M12 11v10M8 17l4 4 4-4" />
+              <circle cx="12" cy="7" r="1" fill="#2563EB" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-brand-dark text-lg mb-2">Instalação</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Instalamos split, multi-split e sistemas de climatização
+            comercial. Tudo com suporte adequado, cabeamento correto e sem furos desnecessários.</p>
+        </div>
+
+        <!-- Manutenção -->
+        <div class="service-card bg-white rounded-2xl p-7 border border-gray-100 reveal">
+          <div class="w-12 h-12 rounded-xl bg-brand-blueLight flex items-center justify-center mb-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-brand-dark text-lg mb-2">Manutenção</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Preventiva para evitar o imprevisto. Corretiva quando o
+            aparelho para. Higienização profunda para ar mais saudável. Sem sumiço depois do serviço.</p>
+        </div>
+
+        <!-- Venda de Equipamentos -->
+        <div class="service-card bg-white rounded-2xl p-7 border border-gray-100 reveal">
+          <div class="w-12 h-12 rounded-xl bg-brand-blueLight flex items-center justify-center mb-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 01-8 0" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-brand-dark text-lg mb-2">Venda de Equipamentos</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Indicamos o modelo certo para o seu espaço, sem empurrar o
+            mais caro. Você compra com quem vai instalar: sem quebra de garantia, sem surpresa.</p>
+        </div>
+
+        <!-- PMOC -->
+        <div class="service-card bg-brand-blue rounded-2xl p-7 border border-brand-blue reveal">
+          <div class="w-12 h-12 rounded-xl bg-white bg-opacity-15 flex items-center justify-center mb-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 12l2 2 4-4" />
+              <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c1.85 0 3.57.56 5 1.52" />
+              <path d="M21 3l-9 9" />
+              <path d="M15 3h6v6" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-white text-lg mb-2">Contrato PMOC</h3>
+          <p class="text-blue-200 text-sm leading-relaxed">O Plano de Manutenção exigido pela ANVISA para empresas.
+            Evita multas da vigilância sanitária e garante qualidade do ar para clientes e funcionários.</p>
+          <a href="#faq"
+            class="inline-block mt-4 text-orange-400 text-sm font-semibold hover:text-orange-300 transition-colors">Entender
+            o PMOC →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       IMAGEM BANNER — SLOT 2 DE 4
+  ============================================================ -->
+  <!-- ╔══════════════════════════════════════════════════════════════╗
+       ║  SLOT 2 — Banner imersivo entre Serviços e Problema/Solução ║
+       ║  Recomendação: foto panorâmica de ambiente climatizado       ║
+       ║  (escritório, clínica ou sala comercial bem climatizada).    ║
+       ║  Orientação horizontal (16:5 · ex: 1440×450px).             ║
+       ║  Para usar: troque o src pelo caminho da sua foto.           ║
+       ╚══════════════════════════════════════════════════════════════╝ -->
+  <div class="relative w-full overflow-hidden bg-brand-dark" style="height: 320px;">
+    <img src="imagens/instalação-meio-ar-condicionado.webp"
+      alt="Ambiente comercial com climatização M&M instalada e funcionando" class="w-full h-full object-cover"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+  </div>
+
+  <!-- ============================================================
+       O PROBLEMA vs SOLUÇÃO (Contraste térmico como layout)
+  ============================================================ -->
+  <section class="py-20 md:py-28 px-6 md:px-10 lg:px-20 bg-white" aria-label="Problema e Solução">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <span class="text-brand-orange text-sm font-semibold tracking-widest uppercase">Por que manutenção
+          importa</span>
+        <h2 class="text-brand-dark text-3xl md:text-4xl font-extrabold mt-3">Negligenciar o ar custa mais<br />do que
+          você imagina.</h2>
+      </div>
+
+      <!-- Split frio/calor — a assinatura visual do layout -->
+      <div class="grid md:grid-cols-2 gap-6 reveal">
+        <!-- Lado Problema (laranja) -->
+        <div class="bg-orange-50 border border-orange-100 rounded-2xl p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EA580C" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+                <line x1="12" y1="9" x2="12" y2="13" />
+                <line x1="12" y1="17" x2="12.01" y2="17" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-brand-orange text-lg">Sem manutenção regular</h3>
+          </div>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <svg class="shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EA580C"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="15" y1="9" x2="9" y2="15" />
+                <line x1="9" y1="9" x2="15" y2="15" />
+              </svg>
+              <span class="text-brand-dark text-sm leading-relaxed">O aparelho quebra exatamente no dia mais quente do
+                ano, e o conserto urgente sai muito mais caro.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EA580C"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="15" y1="9" x2="9" y2="15" />
+                <line x1="9" y1="9" x2="15" y2="15" />
+              </svg>
+              <span class="text-brand-dark text-sm leading-relaxed">Filtros sujos consomem até <strong>30% mais
+                  energia,</strong> você paga por ar quente e conta alta.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EA580C"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="15" y1="9" x2="9" y2="15" />
+                <line x1="9" y1="9" x2="15" y2="15" />
+              </svg>
+              <span class="text-brand-dark text-sm leading-relaxed">Empresa sem PMOC pode ser autuada pela vigilância
+                sanitária com <strong>multas pesadas</strong>.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EA580C"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="15" y1="9" x2="9" y2="15" />
+                <line x1="9" y1="9" x2="15" y2="15" />
+              </svg>
+              <span class="text-brand-dark text-sm leading-relaxed">Ar com fungos e bactérias causa afastamentos e
+                prejudica a saúde de quem trabalha no local.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Lado Solução (azul) -->
+        <div class="bg-brand-blueLight border border-blue-200 rounded-2xl p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-blue-200 flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-brand-blue text-lg">Com contrato M&M</h3>
+          </div>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <svg class="shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+              <span class="text-brand-dark text-sm leading-relaxed">Visitas agendadas antes de qualquer problema, você
+                não é pego de surpresa no verão.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+              <span class="text-brand-dark text-sm leading-relaxed">Aparelho limpo gasta menos energia, a manutenção se
+                paga na conta de luz.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+              <span class="text-brand-dark text-sm leading-relaxed">PMOC emitido e documentado, sua empresa em dia com a
+                ANVISA, sem estresse.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+              <span class="text-brand-dark text-sm leading-relaxed">Ar filtrado e limpo, ambiente mais saudável para
+                equipe, clientes e moradores.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center mt-10 reveal">
+        <a href="https://wa.me/554196197088?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento!"
+          class="btn-orange inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-base" target="_blank"
+          rel="noopener">
+          Quero um contrato de manutenção
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DIFERENCIAIS
+  ============================================================ -->
+  <section id="diferenciais" class="py-20 md:py-28 px-6 md:px-10 lg:px-20 bg-brand-blue">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <span class="text-orange-400 text-sm font-semibold tracking-widest uppercase">Por que escolher a M&M</span>
+        <h2 class="text-white text-3xl md:text-4xl font-extrabold mt-3">A diferença que você sente<br />antes de pagar
+          qualquer coisa.</h2>
+      </div>
+
+      <!-- ╔══════════════════════════════════════════════════════════════╗
+           ║  SLOT 3 — Foto da equipe / técnico com equipamento          ║
+           ║  Recomendação: equipe uniformizada posando ou trabalhando,  ║
+           ║  ou close de mão do técnico manuseando ferramenta.          ║
+           ║  Orientação horizontal (16:6 · ex: 1200×450px).             ║
+           ║  Para usar: troque o src pelo caminho da sua foto.           ║
+           ╚══════════════════════════════════════════════════════════════╝ -->
+      <div class="rounded-2xl overflow-hidden mb-12 reveal" style="height: 280px;">
+        <img src="imagens/fim-ar-condicionado-instalado.webp" alt="Equipe técnica certificada da M&M Refrigeração"
+          class="w-full h-full object-cover"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white bg-opacity-10 rounded-2xl p-7 border border-white border-opacity-10 reveal">
+          <svg class="mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+          <h3 class="text-white font-bold text-lg mb-2">Técnicos certificados</h3>
+          <p class="text-blue-200 text-sm leading-relaxed">Nossa equipe tem formação técnica e certificações
+            atualizadas. Ninguém experimenta no seu aparelho.</p>
+        </div>
+
+        <div class="bg-white bg-opacity-10 rounded-2xl p-7 border border-white border-opacity-10 reveal">
+          <svg class="mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+            <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" />
+          </svg>
+          <h3 class="text-white font-bold text-lg mb-2">Prazo que é prazo</h3>
+          <p class="text-blue-200 text-sm leading-relaxed">Agendamos, avisamos, aparecemos. Sem o técnico que some ou
+            avisa com 2 horas de atraso que não vem.</p>
+        </div>
+
+        <div class="bg-white bg-opacity-10 rounded-2xl p-7 border border-white border-opacity-10 reveal">
+          <svg class="mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          <h3 class="text-white font-bold text-lg mb-2">Ambiente limpo após o serviço</h3>
+          <p class="text-blue-200 text-sm leading-relaxed">Cobrimos móveis, recolhemos todo o material e saímos do local
+            mais limpo do que entramos. Sem sujeira, sem stress.</p>
+        </div>
+
+        <div class="bg-white bg-opacity-10 rounded-2xl p-7 border border-white border-opacity-10 reveal">
+          <svg class="mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 12l2 2 4-4" />
+            <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c1.85 0 3.57.56 5 1.52" />
+            <path d="M21 3l-9 9" />
+            <path d="M15 3h6v6" />
+          </svg>
+          <h3 class="text-white font-bold text-lg mb-2">PMOC emitido e entregue</h3>
+          <p class="text-blue-200 text-sm leading-relaxed">Toda visita gera documentação. Você tem o laudo na mão para
+            apresentar à vigilância sanitária quando precisar.</p>
+        </div>
+
+        <div class="bg-white bg-opacity-10 rounded-2xl p-7 border border-white border-opacity-10 reveal">
+          <svg class="mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+          <h3 class="text-white font-bold text-lg mb-2">Resposta rápida</h3>
+          <p class="text-blue-200 text-sm leading-relaxed">Ar parado em pleno verão é urgência. Priorizamos atendimentos
+            emergenciais para clientes de contrato.</p>
+        </div>
+
+        <div class="bg-white bg-opacity-10 rounded-2xl p-7 border border-white border-opacity-10 reveal">
+          <svg class="mb-4" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="1" x2="12" y2="23" />
+            <path d="M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6" />
+          </svg>
+          <h3 class="text-white font-bold text-lg mb-2">Orçamento sem surpresa</h3>
+          <p class="text-blue-200 text-sm leading-relaxed">O preço que passamos é o preço que você paga. Nada aparece na
+            hora de assinar que não foi combinado antes.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROVA SOCIAL
+  ============================================================ -->
+  <section class="py-20 md:py-28 px-6 md:px-10 lg:px-20 bg-brand-offwhite">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <span class="text-brand-orange text-sm font-semibold tracking-widest uppercase">Quem já confiou na M&M</span>
+        <h2 class="text-brand-dark text-3xl md:text-4xl font-extrabold mt-3">Empresas e residências que<br />dormem com
+          o ar funcionando.</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 reveal">
+
+        <div class="bg-white rounded-2xl p-7 border border-gray-100">
+          <div class="flex mb-4" aria-label="5 estrelas">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F97316" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F97316" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F97316" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F97316" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F97316" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </div>
+          <p class="text-brand-dark text-sm leading-relaxed mb-5">"Contratei para fazer a manutenção dos 6 aparelhos do
+            escritório. Chegaram no horário, cobriram tudo e saíram sem deixar rastro. O laudo PMOC veio por e-mail no
+            mesmo dia."</p>
+          <div class="flex items-center gap-3">
+            <!-- ╔═══════════════════════════════════════════════════════╗
+                 ║ SLOT 4a — Foto do cliente (avatar circular 36×36px)   ║
+                 ║ Troque src="FOTO-CLIENTE-RC.jpg" pela foto real.      ║
+                 ╚═══════════════════════════════════════════════════════╝ -->
+            <div class="relative w-9 h-9 rounded-full overflow-hidden shrink-0">
+              <img src="FOTO-CLIENTE-RC.jpg" alt="Ricardo C." class="w-full h-full object-cover"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div style="display:none;"
+                class="absolute inset-0 bg-blue-100 flex items-center justify-center text-brand-blue font-bold text-sm">
+                RC</div>
+            </div>
+            <div>
+              <p class="font-semibold text-brand-dark text-sm">Ricardo C.</p>
+              <p class="text-brand-gray text-xs">Gerente de Facilities – Curitiba</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-7 border border-gray-100">
+          <div class="flex mb-4" aria-label="5 estrelas">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F97316" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F97316" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F97316" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F97316" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F97316" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </div>
+          <p class="text-brand-dark text-sm leading-relaxed mb-5">"Tive problema de vazamento no meu split. A M&M veio
+            no dia seguinte, identificou um entupimento no dreno e resolveu em 40 minutos. Honesto e rápido."</p>
+          <div class="flex items-center gap-3">
+            <!-- SLOT 4b — Foto da cliente (avatar circular 36×36px) -->
+            <div class="relative w-9 h-9 rounded-full overflow-hidden shrink-0">
+              <img src="FOTO-CLIENTE-AS.jpg" alt="Ana S." class="w-full h-full object-cover"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div style="display:none;"
+                class="absolute inset-0 bg-orange-100 flex items-center justify-center text-brand-orange font-bold text-sm">
+                AS</div>
+            </div>
+            <div>
+              <p class="font-semibold text-brand-dark text-sm">Ana S.</p>
+              <p class="text-brand-gray text-xs">Proprietária – Residência</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-7 border border-gray-100">
+          <div class="flex mb-4" aria-label="5 estrelas">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F97316" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F97316" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F97316" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F97316" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F97316" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </div>
+          <p class="text-brand-dark text-sm leading-relaxed mb-5">"Síndico de um condomínio comercial, eles cuidam dos
+            12 aparelhos das áreas comuns. Nunca tive problema com vigilância sanitária desde que fechei o contrato PMOC
+            com eles."</p>
+          <div class="flex items-center gap-3">
+            <!-- SLOT 4c — Foto do cliente (avatar circular 36×36px) -->
+            <div class="relative w-9 h-9 rounded-full overflow-hidden shrink-0">
+              <img src="FOTO-CLIENTE-MF.jpg" alt="Marcos F." class="w-full h-full object-cover"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div style="display:none;"
+                class="absolute inset-0 bg-blue-100 flex items-center justify-center text-brand-blue font-bold text-sm">
+                MF</div>
+            </div>
+            <div>
+              <p class="font-semibold text-brand-dark text-sm">Marcos F.</p>
+              <p class="text-brand-gray text-xs">Síndico – Condomínio Comercial</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+  ============================================================ -->
+  <section id="faq" class="py-20 md:py-28 px-6 md:px-10 lg:px-20 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <span class="text-brand-orange text-sm font-semibold tracking-widest uppercase">Dúvidas frequentes</span>
+        <h2 class="text-brand-dark text-3xl md:text-4xl font-extrabold mt-3">Respostas diretas,<br />sem enrolação.</h2>
+      </div>
+
+      <div class="space-y-3 reveal" id="faq-list">
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button
+            class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors"
+            aria-expanded="false">
+            <span class="font-semibold text-brand-dark">O que é o PMOC e minha empresa é obrigada a ter?</span>
+            <svg class="faq-icon shrink-0 ml-4" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EA580C"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-brand-gray text-sm leading-relaxed pb-5">O PMOC (Plano de Manutenção, Operação e Controle) é
+              um documento exigido pela ANVISA para todo local com sistema de climatização coletiva, escritórios,
+              clínicas, shoppings, escolas, academias, entre outros. Sem ele, sua empresa pode ser autuada e multada em
+              uma fiscalização. Nós elaboramos, executamos e documentamos o PMOC para você, basta pedir um orçamento.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button
+            class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors"
+            aria-expanded="false">
+            <span class="font-semibold text-brand-dark">A manutenção vai parar meu escritório ou fazer muita
+              sujeira?</span>
+            <svg class="faq-icon shrink-0 ml-4" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EA580C"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-brand-gray text-sm leading-relaxed pb-5">Não. Protegemos móveis e equipamentos antes de
+              começar, fazemos o serviço de forma limpa e organizada, e saímos deixando o espaço arrumado. A maioria das
+              manutenções pode ser feita fora do horário de pico, você escolhe o melhor horário.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button
+            class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors"
+            aria-expanded="false">
+            <span class="font-semibold text-brand-dark">Vocês vendem o equipamento também?</span>
+            <svg class="faq-icon shrink-0 ml-4" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EA580C"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-brand-gray text-sm leading-relaxed pb-5">Sim. Trabalhamos com equipamentos de marcas
+              confiáveis e indicamos o modelo ideal para o seu espaço, levando em conta a metragem, a exposição ao sol e
+              o uso. Como somos quem instala, não tem quebra de garantia nem jogo de empurra se algo der errado.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button
+            class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors"
+            aria-expanded="false">
+            <span class="font-semibold text-brand-dark">Preciso de contrato mensal ou posso chamar só quando
+              quebrar?</span>
+            <svg class="faq-icon shrink-0 ml-4" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EA580C"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-brand-gray text-sm leading-relaxed pb-5">Você pode chamar pontualmente, sem problema. Mas
+              quando o ar quebra no calor, o conserto urgente sai mais caro e demora mais. Com o contrato preventivo,
+              você paga menos por visita, tem prioridade no atendimento e evita a surpresa desagradável. A maioria de
+              quem experimenta o contrato não volta atrás.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button
+            class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors"
+            aria-expanded="false">
+            <span class="font-semibold text-brand-dark">Atendem em qual região?</span>
+            <svg class="faq-icon shrink-0 ml-4" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EA580C"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-brand-gray text-sm leading-relaxed pb-5">Atendemos Curitiba e região metropolitana. Em caso
+              de dúvida sobre sua localidade, fale com a gente pelo WhatsApp e confirmamos em segundos.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA FINAL
+  ============================================================ -->
+  <section class="py-20 md:py-28 px-6 md:px-10 lg:px-20 bg-brand-dark">
+    <div class="max-w-3xl mx-auto text-center reveal">
+      <span class="text-orange-400 text-sm font-semibold tracking-widest uppercase">Próximo passo</span>
+      <h2 class="text-white text-3xl md:text-5xl font-extrabold mt-4 mb-6 leading-tight">
+        Peça seu orçamento agora.<br />
+        <span class="text-orange-400">Sem compromisso.</span>
+      </h2>
+      <p class="text-gray-400 text-lg mb-10 leading-relaxed">
+        Fale com a gente pelo WhatsApp, descreva o que precisa e retornamos com um orçamento claro, sem letrinhas
+        miúdas.
+      </p>
+      <a href="https://wa.me/554196197088?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento!"
+        class="btn-orange inline-flex items-center gap-3 px-10 py-5 rounded-xl font-bold text-lg" target="_blank"
+        rel="noopener">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        Falar no WhatsApp
+      </a>
+      <p class="text-gray-500 text-sm mt-5">Respondemos em até 30 minutos durante o horário comercial.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="bg-brand-blue py-12 px-6 md:px-10 lg:px-20">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 items-start">
+
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <!-- Espaço para a logo em imagem no rodapé -->
+          <img src="imagens/logo-m&m.png" alt="Logo M&M" class="h-10 w-auto object-contain" />
+
+          <!-- Texto da logo (Opcional, apague se a imagem já tiver o texto) -->
+          <span class="font-extrabold text-white text-base">M&M Refrigeração e Climatização</span>
+        </div>
+        <p class="text-blue-200 text-sm leading-relaxed">Soluções em climatização e refrigeração para empresas e
+          residências em Curitiba e região metropolitana.</p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Serviços</h4>
+        <ul class="space-y-2 text-blue-200 text-sm">
+          <li>Instalação de Ar-Condicionado</li>
+          <li>Manutenção Preventiva e Corretiva</li>
+          <li>Venda de Equipamentos</li>
+          <li>Contratos PMOC</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Contato</h4>
+        <ul class="space-y-3 text-blue-200 text-sm">
+          <li class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.72 9.87 19.79 19.79 0 01.67 1.23a2 2 0 012-.22h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 15.92z" />
+            </svg>
+            (41) 9619-7088
+          </li>
+          <li class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            mauricio_malfatti@hotmail.com
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Curitiba – PR
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div
+      class="max-w-6xl mx-auto border-t border-blue-800 mt-10 pt-7 flex flex-col md:flex-row items-center justify-between gap-3 text-blue-300 text-xs">
+      <p>© 2026 M&M Refrigeração e Climatização. Todos os direitos reservados.</p>
+      <p>CNPJ: 14.781.011/0001-60</p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       WhatsApp FAB
+  ============================================================ -->
+  <a href="https://wa.me/554196197088?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento!" class="whatsapp-fab"
+    target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <!-- ============================================================
+       SCRIPTS
+  ============================================================ -->
+  <script>
+    // Sticky nav background
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 30) {
+        navbar.classList.add('nav-scrolled');
+      } else {
+        navbar.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    reveals.forEach(el => observer.observe(el));
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const item = trigger.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = trigger.querySelector('.faq-icon');
+        const isOpen = answer.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+        document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotated'));
+        document.querySelectorAll('.faq-trigger').forEach(t => t.setAttribute('aria-expanded', 'false'));
+
+        if (!isOpen) {
+          answer.classList.add('open');
+          icon.classList.add('rotated');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
